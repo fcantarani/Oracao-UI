@@ -1,5 +1,5 @@
-import { Button } from "./components/ui/button";
-import { Input } from "./components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Badge, BadgeCheck, PlusCircle } from "lucide-react";
 import {
   Table,
@@ -8,7 +8,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "./components/ui/table";
+} from "@/components/ui/table";
 import {
   Dialog,
   DialogClose,
@@ -18,13 +18,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "./components/ui/dialog";
-import { Label } from "./components/ui/label";
+} from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
 import { useState } from "react";
-import { Textarea } from "./components/ui/textarea";
+import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
 
-export function App() {
+export default function Home() {
   const form = useForm();
   const [pray, setPray] = useState(false);
 
