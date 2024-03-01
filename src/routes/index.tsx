@@ -1,4 +1,5 @@
 import Home from "@/pages/home";
+import MasterPager from "@/pages/master-page";
 import MyRequests from "@/pages/my-requests";
 import Admin from "@/pages/settings";
 import { createBrowserRouter } from "react-router-dom";
@@ -6,6 +7,7 @@ import { createBrowserRouter } from "react-router-dom";
 export const AppRoute = createBrowserRouter([
   {
     path: "/",
+    element: <MasterPager />,
     children: [
       { path: "/home", element: <Home /> },
       { path: "/pedidos", element: <MyRequests /> },

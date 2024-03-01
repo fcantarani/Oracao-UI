@@ -29,16 +29,16 @@ export default function Home() {
   const [pray, setPray] = useState(false);
 
   const handleSubmit = form.handleSubmit((data) => {
-    console.log("data===> ", data);
+    console.log("data===>", data);
   });
 
   return (
     <div>
-      <div className="max-w-7xl p-6 mx-auto space-y-4">
+      <div className="space-y-5">
         <div className="flex items-center justify-between">
           <Dialog>
             <div className="flex w-full justify-end">
-              <DialogTrigger aschild>
+              <DialogTrigger asChild>
                 <Button>
                   <PlusCircle className="size-4 mr-2" />
                   Novo Pedido
@@ -55,16 +55,48 @@ export default function Home() {
               </DialogHeader>
               <form onSubmit={handleSubmit} className="space-y-6" action="POST">
                 <div className="grid grid-cols-4 items-center text-right gap-2">
-                  <Label htmlfor="category">Categoria</Label>
-                  <Input
-                    className="col-span-3"
-                    id="category"
+                  <Label htmlFor="category">Categoria</Label>
+                  <select
+                    className="inline-flex items-center 
+                                justify-center whitespace-nowrap 
+                                rounded-md text-sm 
+                                transition-colors 
+                                focus-visible:outline-none 
+                                focus-visible:ring-1 
+                                focus-visible:ring-ring 
+                                disabled:pointer-events-none 
+                                disabled:opacity-50 border 
+                                border-input bg-background 
+                                shadow-sm hover:bg-accent 
+                                hover:text-accent-foreground 
+                                h-9 px-4 py-2 w-[200px] appearance-none 
+                                font-normal"
                     {...form.register("category")}
-                  />
+                  >
+                    <option key="null" value="null">
+                      --- Selecione uma opção ---
+                    </option>
+                    <option key="adoracao" value="adoracao">
+                      Adoração
+                    </option>
+                    <option key="acaodegracas" value="acaodegracas">
+                      Ação de graças
+                    </option>
+
+                    <option key="confissaodepecado" value="confissaodepecado">
+                      Confissão de pecado
+                    </option>
+                    <option key="peticaoesuplica" value="peticaoesuplica">
+                      Petição e súplica
+                    </option>
+                    <option key="intercessao" value="intercessao">
+                      Intercessão
+                    </option>
+                  </select>
                 </div>
 
                 <div className="grid grid-cols-4 items-center text-right gap-2">
-                  <Label htmlfor="title">Titulo</Label>
+                  <Label htmlFor="title">Titulo</Label>
                   <Input
                     className="col-span-3"
                     id="title"
@@ -82,7 +114,7 @@ export default function Home() {
                 </div>
 
                 <DialogFooter>
-                  <DialogClose aschild>
+                  <DialogClose asChild>
                     <Button type="button" variant="outline">
                       Cancelar
                     </Button>
