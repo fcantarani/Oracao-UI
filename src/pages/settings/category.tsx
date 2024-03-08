@@ -10,7 +10,7 @@ export default function Category() {
 
   const loadCategories = () => {
     console.log("....🔥....");
-    fetch(url)
+    fetch(url, { mode: "cors" })
       .then((response) => {
         return response.json();
       })
