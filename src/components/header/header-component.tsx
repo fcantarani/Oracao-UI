@@ -10,6 +10,7 @@ export function HeaderComponent() {
           <Link to="/home">Home</Link>
           <Link to="/pedidos">Meus Pedidos</Link>
           <Link to="/admin">Administração</Link>
+          <Link to="/login">Login</Link>
         </div>
 
         <div className="flex justify-end gap-3 w-96">

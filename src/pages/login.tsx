@@ -28,9 +28,9 @@ export default function Login() {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="flex h-screen mx-auto items-center bg-gray-100">
-                <div className="flex flex-col md:w-3/12 w-11/12 md:h-3/6 h-4/6 p-4 mx-auto border rounded-lg shadow-xl gap-4 bg-white">
+        <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
+            <div className="flex h-screen mx-auto items-center">
+                <div className="flex flex-col md:h-3/6 h-4/6 p-4 mx-auto border rounded-lg shadow-xl gap-4">
                     <div className="flex justify-center">
                         <h1>Digite seu e-mail e senha para entrar.</h1>
                     </div>
@@ -51,7 +51,7 @@ export default function Login() {
                     <Separator />
 
                     <div className="">
-                        <Button className="w-full" variant={"secondary"}>Cadastrar</Button>
+                        <Button className="w-full" variant={"outline"}>Cadastrar</Button>
                     </div>
 
                     <p className="px-8 text-center text-sm text-muted-foreground">

@@ -25,8 +25,8 @@ export default function Category() {
 
   if (categories)
     return (
-      <>
+      <main className="my-4">
         <h1>{categories.map((x) => x.name)}</h1>
-      </>
+      </main>
     );
 }

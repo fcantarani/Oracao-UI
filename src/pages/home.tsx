@@ -33,7 +33,7 @@ export default function Home() {
   });
 
   return (
-    <div>
+    <main className="my-4">
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <Dialog>
@@ -179,6 +179,6 @@ export default function Home() {
           </Table>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
