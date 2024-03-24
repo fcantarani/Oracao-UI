@@ -45,13 +45,13 @@ export default function Login() {
                         {errors.password && <span className="text-xs text-red-600">{errors.password.message}</span>}
                     </div>
                     <div className="w-full">
-                        <Button type="submit" className="w-full font-bold">Entrar</Button>
+                        <Button type="submit" className="w-full">Entrar</Button>
                     </div>
 
                     <Separator />
 
                     <div className="">
-                        <Button className="w-full font-semibold" variant={"secondary"}>Cadastrar</Button>
+                        <Button className="w-full" variant={"secondary"}>Cadastrar</Button>
                     </div>
 
                     <p className="px-8 text-center text-sm text-muted-foreground">
