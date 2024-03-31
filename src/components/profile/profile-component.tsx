@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useAuth } from "@/hooks/use-auth";
-import { redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 export function ProfileComponent() {
 
@@ -18,7 +18,7 @@ export function ProfileComponent() {
 
   const LogOut = () => {
     localStorage.removeItem("authenticated");
-    redirect('\login')
+    <Navigate to="/login" replace={true} />
   }
 
   return (

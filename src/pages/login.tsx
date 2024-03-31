@@ -7,6 +7,7 @@ import { z } from "zod";
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useState } from "react";
+import { Navigate } from "react-router-dom";
 
 export default function Login() {
 
@@ -37,6 +38,7 @@ export default function Login() {
         if (account && account.password === password) {
             setAuthenticated(true)
             localStorage.setItem("authenticated", "true");
+            <Navigate to="/home" replace={true} />
             console.log("Auth=====>", authenticated)
         }
     }
