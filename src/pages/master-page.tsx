@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 export default function MasterPage() {
 
-  const auth = true;
+  const auth = localStorage.getItem("authenticated");
 
   return (
     <Suspense fallback={<p>Aguarde...</p>}>
