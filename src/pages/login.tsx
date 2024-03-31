@@ -7,7 +7,7 @@ import { z } from "zod";
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
 
@@ -30,6 +30,8 @@ export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [authenticated, setAuthenticated] = useState(false);
+    const navigate = useNavigate();
+
 
     const onSubmit = (data: any) => {
         console.log(data)
@@ -38,8 +40,9 @@ export default function Login() {
         if (account && account.password === password) {
             setAuthenticated(true)
             localStorage.setItem("authenticated", "true");
-            <Navigate to="/home" replace={true} />
             console.log("Auth=====>", authenticated)
+            navigate("/home")
+            window.location.reload();
         }
     }
 

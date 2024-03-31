@@ -10,15 +10,17 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useAuth } from "@/hooks/use-auth";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function ProfileComponent() {
 
   const currentUser = useAuth();
+  const navigate = useNavigate();
 
   const LogOut = () => {
     localStorage.removeItem("authenticated");
-    <Navigate to="/login" replace={true} />
+    navigate("/login")
+    window.location.reload();
   }
 
   return (
