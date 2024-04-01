@@ -47,7 +47,7 @@ export default function Login() {
     }
 
     return (
-        <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
+        <form className="w-full" onSubmit={() => handleSubmit(onSubmit)}>
             <div className="flex h-screen mx-auto items-center">
                 <div className="flex flex-col md:h-3/6 h-4/6 p-4 mx-auto border rounded-lg shadow-xl gap-4">
                     <div className="flex justify-center">
