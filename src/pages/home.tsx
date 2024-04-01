@@ -53,7 +53,7 @@ export default function Home() {
                   Criação de uma nova oração.
                 </DialogDescription>
               </DialogHeader>
-              <form onSubmit={() => handleSubmit} className="space-y-6" action="POST">
+              <form onSubmit={() => handleSubmit()} className="space-y-6" action="POST">
                 <div className="grid grid-cols-4 items-center text-right gap-2">
                   <Label htmlFor="category">Categoria</Label>
                   <select
