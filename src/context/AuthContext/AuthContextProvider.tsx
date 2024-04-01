@@ -12,6 +12,14 @@ export default function AuthContextProvider({ children }: IAuth) {
         username: "Fabio C.",
         email: "fabio.cantarani@gmail.com"
     })
+
+    const newUser = {
+        username: "Fabio C.",
+        email: "fabio.cantarani@gmail.com"
+    }
+
+    setCurrentUser(newUser);
+
     return (
         <AuthContext.Provider value={currentUser}>
             {children}

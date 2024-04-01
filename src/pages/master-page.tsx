@@ -9,7 +9,7 @@ export default function MasterPage() {
   return (
     <Suspense fallback={<p>Aguarde...</p>}>
       <main>
-        {auth && (<HeaderComponent />)}
+        {auth?.length && (<HeaderComponent />)}
         <div className="flex mx-auto justify-between max-w-7xl">
           <Outlet />
         </div>

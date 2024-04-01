@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ModeToggle } from "../dark-mode/mode-toggle";
 import { ProfileComponent } from "../profile/profile-component";
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent, NavigationMenuLink } from "../ui/navigation-menu";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent } from "../ui/navigation-menu";
 
 export function HeaderComponent() {
   return (
