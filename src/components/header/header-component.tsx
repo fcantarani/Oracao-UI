@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ModeToggle } from "../dark-mode/mode-toggle";
 import { ProfileComponent } from "../profile/profile-component";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent, NavigationMenuLink } from "../ui/navigation-menu";
 
 export function HeaderComponent() {
   return (
@@ -9,15 +10,29 @@ export function HeaderComponent() {
         <div className="flex items-center gap-5">
           <Link to="/home">Home</Link>
           <Link to="/pedidos">Meus Pedidos</Link>
-          <Link to="/admin">Administração</Link>
-          <Link to="/login">Login</Link>
-        </div>
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Administração</NavigationMenuTrigger>
 
-        <div className="flex justify-end gap-3 w-96">
-          <ModeToggle />
-          <ProfileComponent />
-        </div>
+                <NavigationMenuContent>
+                  <ul className="flex flex-col gap-3 p-4 w-[200px]">
+                    <Link to="admin/users">Usuários</Link>
+                    <Link to="admin/category">Categorias</Link>
+                  </ul>
+                </NavigationMenuContent>
+            </NavigationMenuItem>
+            </NavigationMenuList>
+        </NavigationMenu>
+
+
       </div>
-    </div>
+
+      <div className="flex justify-end gap-3 w-96">
+        <ModeToggle />
+        <ProfileComponent />
+      </div>
+    </div >
+    </div >
   );
 }
