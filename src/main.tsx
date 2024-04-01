@@ -7,6 +7,12 @@ import { ThemeProvider } from "./context/theme-provider.tsx";
 import { AppRoute } from "./routes/index.tsx";
 import AuthContextProvider from "./context/AuthContext/AuthContextProvider.tsx";
 
+//Importação do Moment
+import moment from "moment";
+import "moment/dist/locale/pt-br";
+
+moment.locale("pt-br");
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">

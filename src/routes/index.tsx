@@ -5,6 +5,7 @@ import MyRequests from "@/pages/my-requests";
 import Admin from "@/pages/settings";
 import Category from "@/pages/settings/category";
 import { createBrowserRouter } from "react-router-dom";
+import { Users } from "@/pages/settings/users";
 import ProtectedRoute from "./ProtectedRoute";
 
 export const AppRoute = createBrowserRouter([
@@ -20,6 +21,7 @@ export const AppRoute = createBrowserRouter([
         path: "admin", element: (<ProtectedRoute> <Admin /> </ProtectedRoute>),
         children: [
           { path: "category", element: <Category /> },
+          { path: "users", element: <Users /> },
         ]
       }
     ]
